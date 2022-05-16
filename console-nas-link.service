@@ -1,0 +1,11 @@
+[Unit]
+Description=Console NAS Link
+
+[Service]
+ExecStart=/bin/bash -c '/root/console-nas-link.sh start'
+ExecStop=/bin/bash -c '/root/console-nas-link.sh stop'
+Restart=no
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
